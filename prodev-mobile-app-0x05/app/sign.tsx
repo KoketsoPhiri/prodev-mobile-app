@@ -1,21 +1,12 @@
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  TextInput,
-  Image,
-} from "react-native";
+
 import React, { useState } from "react";
+import { View, Text, TouchableOpacity, TextInput, Image } from "react-native";
 import { styles } from "@/styles/_joinstyle";
 import { Stack, router } from "expo-router";
-import {
-  HEROLOGOGREEN,
-  GOOGLELOGO,
-  FACEBOOKLOGO,
-} from "@/constants";
+import { HEROLOGOGREEN, GOOGLELOGO, FACEBOOKLOGO } from "@/constants";
 import { Ionicons } from "@expo/vector-icons";
 
-const Join = () => {
+const Sign = () => {
   const [passwordShown, setPasswordShown] = useState(false);
 
   return (
@@ -34,21 +25,13 @@ const Join = () => {
         </View>
 
         <View style={styles.titleTextGroup}>
-          <Text style={styles.titleText}>Join Prodev</Text>
-          <Text style={styles.subText}>Create your account to continue</Text>
-        </View>
-
-        <View style={styles.formGroup}>
-          <Text style={styles.formLabel}>Full name</Text>
-          <TextInput style={styles.formControl} />
+          <Text style={styles.titleText}>Sign in</Text>
+          <Text style={styles.subText}>Enter your email and password to sign in.</Text>
         </View>
 
         <View style={styles.formGroup}>
           <Text style={styles.formLabel}>Email address</Text>
-          <TextInput
-            style={styles.formControl}
-            keyboardType="email-address"
-          />
+          <TextInput style={styles.formControl} keyboardType="email-address" />
         </View>
 
         <View style={styles.formGroup}>
@@ -66,10 +49,11 @@ const Join = () => {
               />
             </TouchableOpacity>
           </View>
+          <Text style={styles.forgotPasswordText}>Forgot password?</Text>
         </View>
 
         <TouchableOpacity style={styles.primaryButton}>
-          <Text style={styles.buttonText}>Sign up</Text>
+          <Text style={styles.buttonText}>Sign in</Text>
         </TouchableOpacity>
 
         <View style={styles.dividerGroup}>
@@ -81,18 +65,18 @@ const Join = () => {
         <View style={styles.secondaryButtonGroup}>
           <TouchableOpacity style={styles.secondaryButton}>
             <Image source={GOOGLELOGO} />
-            <Text style={styles.secondaryButtonText}>Sign Up with Google</Text>
+            <Text style={styles.secondaryButtonText}>Sign in with Google</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.secondaryButton}>
             <Image source={FACEBOOKLOGO} />
-            <Text style={styles.secondaryButtonText}>Sign Up with Facebook</Text>
+            <Text style={styles.secondaryButtonText}>Sign in with Facebook</Text>
           </TouchableOpacity>
         </View>
 
         <View style={styles.signupgroup}>
-          <Text style={styles.signupTitleText}>Already have an account? </Text>
-          <TouchableOpacity onPress={() => router.push('/signin')}>
-            <Text style={styles.signupSubTitleText}>Sign in</Text>
+          <Text style={styles.signupTitleText}>Do not have an account? </Text>
+          <TouchableOpacity onPress={() => router.push('./join')}>
+            <Text style={styles.signupSubTitleText}>Join now</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -100,4 +84,4 @@ const Join = () => {
   );
 };
 
-export default Join;
+export default Sign;
