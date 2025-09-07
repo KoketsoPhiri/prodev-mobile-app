@@ -1,20 +1,21 @@
-import { View, Text } from "react-native";
+// components/PropertyListing.tsx
+import React from "react";
+import { View, FlatList } from "react-native";
 import PropertyListingCard from "./common/PropertyListingCard";
-import { useState } from "react";
-import { PropertListing, PropertyListingProps } from "../interfaces";
 
-const PropertyListing = ({ listings }: PropertListing) => {
+interface PropertyListingProps {
+  listings: any[];
+}
+
+const PropertyListing: React.FC<PropertyListingProps> = ({ listings }) => {
   return (
-    <View
-      style={{
-        flex: 1,
-        rowGap: 10,
-      }}
-    >
-      {listings?.map((listing, key) => (
-        <PropertyListingCard {...listing} key={key} />
-      ))}
-    </View>
+    <FlatList
+      data={listings}
+      keyExtractor={(item, index) => index.toString()}
+      renderItem={({ item }) => <PropertyListingCard property={item} />}
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={{ paddingBottom: 20 }}
+    />
   );
 };
 
