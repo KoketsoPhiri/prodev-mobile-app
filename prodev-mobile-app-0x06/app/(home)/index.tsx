@@ -1,5 +1,5 @@
 import PropertyListing from "../../components/PropertyListing";
-import { styles } from "@/styles/_homestyle"; // Fix import path
+import { styles } from "../../styles/_homestyle"; // Fix import path
 import { Feather } from "@expo/vector-icons";
 import {
   View,

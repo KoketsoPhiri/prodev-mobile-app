@@ -1,127 +1,131 @@
+// styles/_joinstyles.ts
 import { StyleSheet } from "react-native";
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20
+    backgroundColor: "#FFFFFF",
+    paddingHorizontal: 20,
+    paddingTop: 20,
   },
-  iconsection: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginTop: 22
+
+  // 🔙 Top navigation group
+  navGroup: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 30,
+    justifyContent: "flex-start",
+    gap: 10,
   },
-  titleTextGroup: {
-    marginTop: 20
+
+  // 📝 Texts
+  largeText: {
+    fontSize: 28,
+    fontWeight: "700",
+    color: "#000000",
   },
-  titleText: {
-    fontWeight: 700,
-    fontSize: 39,
+  smallText: {
+    fontSize: 14,
+    color: "#7E7B7B",
+    marginTop: 8,
+    marginBottom: 20,
   },
-  subText: {
-    fontWeight: 400,
-    fontSize: 12,
-    color: '#7E7B7B'
-  },
+
+  // 📋 Form
   formGroup: {
-    marginTop: 44,
-    rowGap: 10
+    marginTop: 10,
+    marginBottom: 30,
   },
-  formLabel: {
-    fontSize: 18,
-    fontWeight: 400,
-    color: '#7B7B7B',
-    marginBottom: 7
+  placeholderText: {
+    fontSize: 14,
+    fontWeight: "500",
+    marginBottom: 8,
+    color: "#333333",
   },
-  formControl: {
-    borderWidth: 2,
-    height: 50,
+  inputField: {
+    borderWidth: 1,
+    borderColor: "#DDDDDD",
+    borderRadius: 8,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    fontSize: 14,
+    backgroundColor: "#F9F9F9",
+  },
+  passwordGroup: {
+    flexDirection: "row",
+    alignItems: "center",
+    borderWidth: 1,
+    borderColor: "#DDDDDD",
+    borderRadius: 8,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    backgroundColor: "#F9F9F9",
+  },
+
+  // 🔘 Main button
+  button: {
+    backgroundColor: "#34967C",
     borderRadius: 10,
-    borderColor: '#E9E9E9',
-    paddingHorizontal: 10
-  },
-  formPasswordControl: {
-    borderWidth: 2,
-    height: 50,
-    borderRadius: 10,
-    borderColor: '#E9E9E9',
-    paddingHorizontal: 10,
-    flexDirection: 'row',
-    alignItems: 'center'
-  },
-  passwordControl: {
-    flex: 1
-  },
-  primaryButton: {
-    backgroundColor: '#34967C',
-    height: 53,
-    borderRadius: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 25
+    paddingVertical: 14,
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 25,
   },
   buttonText: {
-    color: 'white',
-    fontSize: 17,
-    fontWeight: 300
+    color: "#FFFFFF",
+    fontSize: 16,
+    fontWeight: "600",
   },
-  secondaryButtonGroup: {
-    rowGap: 15,
-    marginTop: 15,
-  },
-  secondaryButton: {
-    height: 53,
-    borderRadius: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
-    columnGap: 10,
-    borderWidth: 1,
-  },
-  secondaryButtonText: {
-    fontSize: 18,
-    fontWeight: 400
-  },
-  signupgroup: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    position: 'absolute',
-    left: 77,
-    right: 76,
-    bottom: 33
-  },
-  signupTitleText: {
-    fontSize: 18,
-    fontWeight: 400
-  },
-  signupSubTitleText: {
-    fontSize: 18,
-    fontWeight: 600,
-    color: '#FFA800'
-  },
+
+  // ➖ Divider
   dividerGroup: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    columnGap: 10,
-    marginBottom: 25,
-    marginTop: 29,
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 20,
   },
   divider: {
-    borderWidth: 1,
     flex: 1,
-    borderColor: '#e6e6e6'
+    height: 1,
+    backgroundColor: "#E0E0E0",
   },
   dividerText: {
-    fontSize: 17,
-    fontWeight: 500,
-    fontVariant: ['small-caps'],
-    color: '#C2C2C2'
+    marginHorizontal: 10,
+    color: "#7E7B7B",
+    fontSize: 13,
   },
-  forgotPasswordText: {
-    textAlign: 'right',
-    color: '#34967C',
-    marginTop: 9,
-  }
-});
 
-export { styles }
+  // 🌐 Social buttons
+  socialMediaButtonGroup: {
+    gap: 12,
+    marginBottom: 30,
+  },
+  socialMediaButton: {
+    borderWidth: 1,
+    borderColor: "#DDDDDD",
+    borderRadius: 8,
+    paddingVertical: 12,
+    paddingHorizontal: 15,
+    backgroundColor: "#FFFFFF",
+  },
+  socialMediaButtonText: {
+    fontSize: 14,
+    fontWeight: "500",
+    color: "#333333",
+  },
+
+  // 📌 Sub text
+  subTextGroup: {
+    flexDirection: "row",
+    justifyContent: "center",
+    gap: 5,
+  },
+  subText: {
+    fontSize: 14,
+    color: "#7E7B7B",
+  },
+  subTextJoin: {
+    fontSize: 14,
+    fontWeight: "600",
+    color: "#34967C",
+  },
+});
