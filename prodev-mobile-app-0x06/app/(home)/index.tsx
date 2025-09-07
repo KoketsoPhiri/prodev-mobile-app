@@ -1,5 +1,5 @@
 import PropertyListing from "../../components/PropertyListing";
-import { styles } from "../../styles/_homestyle"; // Fix import path
+import { styles } from "@/styles/_homestyle"; // Fix import path
 import { Feather } from "@expo/vector-icons";
 import {
   View,
@@ -44,7 +44,7 @@ const Home = () => {
                   style={{
                     flex: 1,
                   }}
-                  source={require("../../assets/images/mansion.png")}
+                  source={require("../../assets/images/hero-icon.png")}
                   resizeMode="contain"
                 />
                 <Text>{filter}</Text>

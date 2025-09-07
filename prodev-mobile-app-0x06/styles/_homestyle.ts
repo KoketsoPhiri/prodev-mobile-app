@@ -1,85 +1,80 @@
-import { StyleSheet, Dimensions } from "react-native";
-const { width } = Dimensions.get("window");
+// styles/_homestyle.ts
+import { StyleSheet } from "react-native";
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    paddingTop: 50
+    backgroundColor: "#F8F9FA",
   },
+
+  // 🔎 Search Section
   searchGroup: {
-    paddingTop: 10,
-    paddingBottom: 25,
-    backgroundColor: "#fff",
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    backgroundColor: "white",
+    borderBottomWidth: 1,
+    borderBottomColor: "#E0E0E0",
   },
   searchFormGroup: {
     flexDirection: "row",
-    justifyContent: "space-between",
     alignItems: "center",
-    borderColor: "#EBEBEB",
-    borderWidth: 1,
-    borderRadius: 25,
-    height: 50,
-    width: width - 40,
-    paddingHorizontal: 15,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 5,
-    elevation: 5,
+    borderRadius: 12,
+    overflow: "hidden",
+    backgroundColor: "#F2F2F2",
   },
   searchControlGroup: {
     flex: 1,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
   },
   searchFormText: {
-    fontSize: 16,
-    fontWeight: "600",
+    fontSize: 14,
+    color: "#333",
   },
   searchControl: {
-    fontSize: 12,
-    fontWeight: "400",
+    fontSize: 14,
+    color: "#555",
   },
   searchButton: {
-    width: 40,
-    height: 40,
-    backgroundColor: "#34967C",
-    borderRadius: 20,
+    backgroundColor: "#FF385C",
+    padding: 12,
     justifyContent: "center",
     alignItems: "center",
   },
+
+  // 🏷️ Filters
   filterGroup: {
     flexDirection: "row",
-    columnGap: 30,
-    paddingHorizontal: 10,
     alignItems: "center",
+    paddingHorizontal: 12,
+    paddingVertical: 8,
   },
   filterContainer: {
     alignItems: "center",
+    marginRight: 20,
     justifyContent: "center",
-    rowGap: 8,
   },
+
+  // 🏠 Listings
   listingContainer: {
     flex: 1,
-    paddingHorizontal: 15,
+    padding: 16,
   },
+
+  // 📖 Pagination
   paginationContainer: {
+    marginVertical: 20,
     alignItems: "center",
-    justifyContent: "center",
-    paddingVertical: 15,
   },
   showMoreButton: {
-    backgroundColor: "#202020",
-    height: 50,
-    width: 150,
-    borderRadius: 25,
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: "#FF385C",
+    borderRadius: 8,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
   },
   showMoreButtonText: {
-    color: "#fff",
-    fontWeight: "500",
+    color: "white",
+    fontWeight: "600",
+    fontSize: 14,
   },
 });
-
-export { styles };
